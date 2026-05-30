@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Heroes - Comic Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        comic: {
+                            red: '#fe5050',
+                            yellow: '#facc15',
+                            black: '#000000',
+                            cream: '#fefce8',
+                            zinc: '#f4f4f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        comic: ['"Comic Sans MS"', 'cursive', 'sans-serif'] // Fallback for comic feel if needed
+                    },
+                    boxShadow: {
+                        'comic': '8px 8px 0px 0px rgba(0,0,0,1)',
+                        'comic-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'comic-inner': 'inset 4px 4px 0px 0px rgba(0,0,0,1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            background-color: #f4f4f5;
+            background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .text-shadow-comic {
+            text-shadow: 3px 3px 0px #000;
+        }
+        
+        .text-shadow-comic-sm {
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        /* Custom scrollbar for comic feel */
+        ::-webkit-scrollbar {
+            width: 12px;
+            border-left: 2px solid #000;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fefce8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fe5050;
+            border: 2px solid #000;
+        }
+    </style>
+    </head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.js"></script></body>
+</html>
